@@ -53,12 +53,6 @@ if (!isFirstInstance) {
     if (proxyStatus.started) {
       disableProxy()
     }
-    if (getUpdateInfo().status === 'moving') {
-      e.preventDefault()
-      setTimeout(() => {
-        app.quit()
-      }, 3000)
-    }
   })
 
   app.on('quit', () => {

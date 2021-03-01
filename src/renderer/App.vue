@@ -86,7 +86,11 @@ const gachaData = computed(() => {
 
 const uidSelectText = computed(() => {
   if (state.current === 0) {
+<<<<<<< HEAD
     return state.i18n.ui.select.newAccount
+=======
+    return 'New Account'
+>>>>>>> c159a15 (Fixing merge conflict, and removing some checks related to background update)
   } else {
     return state.current
   }
