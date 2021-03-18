@@ -26,36 +26,7 @@ const appPath = isDev ? path.resolve(__dirname, '../../', 'update-dev/app'): app
 const updatePath = isDev ? path.resolve(__dirname, '../../', 'update-dev/download') : path.resolve(appPath, '..', '..', 'update')
 
 const update = async () => {
-  if (isDev) return
-  try {
-    const url = 'https://genshin-gacha-export.danmu9.com/update'
-    const res = await fetch(`${url}/manifest.json?t=${Math.floor(Date.now() / (1000 * 60 * 10))}`)
-    const data = await res.json()
-    if (!data.active) return
-    if (semver.gt(data.version, version) && semver.gte(version, data.from)) {
-      await fs.emptyDir(updatePath)
-      const filePath = path.join(updatePath, data.name)
-      if (!config.autoUpdate) {
-        sendMsg(data.version, 'NEW_VERSION')
-        return
-      }
-      updateInfo.status = 'downloading'
-      await download(`${url}/${data.name}`, filePath)
-      const buffer = await fs.readFile(filePath)
-      const sha256 = hash(buffer)
-      if (sha256 !== data.hash) return
-      const appPathTemp = path.join(updatePath, 'app')
-      await extract(filePath, { dir: appPathTemp })
-      updateInfo.status = 'moving'
-      await fs.emptyDir(appPath)
-      await fs.copy(appPathTemp, appPath)
-      updateInfo.status = 'finished'
-      sendMsg(i18n.log.autoUpdate.success, 'UPDATE_HINT')
-    }
-  } catch (e) {
-    updateInfo.status = 'failed'
-    sendMsg(e, 'ERROR')
-  }
+  return;
 }
 
 const getUpdateInfo = () => updateInfo

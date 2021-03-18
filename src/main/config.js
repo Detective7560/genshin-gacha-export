@@ -2,12 +2,12 @@ const { readJSON, saveJSON, decipherAes, cipherAes, detectLocale } = require('./
 
 const config = {
   urls: [],
-  logType: 0,
-  lang: detectLocale(),
+  logType: 2,
+  lang: 'en-us',
   current: 0,
   proxyPort: 8325,
   proxyMode: false,
-  autoUpdate: true
+  autoUpdate: false
 }
 
 const getLocalConfig = async () => {

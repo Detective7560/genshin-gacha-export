@@ -19,12 +19,6 @@
         </el-radio-group>
         <p class="text-gray-400 text-xs mt-1.5">{{text.logTypeHint}}</p>
       </el-form-item>
-      <el-form-item :label="text.autoUpdate">
-        <el-switch
-          @change="saveSetting"
-          v-model="settingForm.autoUpdate">
-        </el-switch>
-      </el-form-item>
       <el-form-item :label="text.proxyMode">
         <el-switch
           @change="saveSetting"
