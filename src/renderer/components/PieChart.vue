@@ -48,7 +48,7 @@ const parseData = (detail, type) => {
   const result = []
   const color = []
   const selected = {
-    [text.weapon3] : false
+  [text.weapon3] : false
   }
   keys.forEach((key, index) => {
     if (!detail[key[1]]) return

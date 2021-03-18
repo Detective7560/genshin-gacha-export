@@ -103,7 +103,8 @@ const start = async () => {
       })
     })
   }
-
+  // sendMsg("Done fetching wish history.")
+  // sendMsg("Exporting...")
   const buffer = await workbook.xlsx.writeBuffer()
   const filePath = dialog.showSaveDialogSync({
     defaultPath: path.join(app.getPath('downloads'), `${filePrefix}_${getTimeString()}`),
@@ -114,6 +115,7 @@ const start = async () => {
   if (filePath) {
     await fs.ensureFile(filePath)
     await fs.writeFile(filePath, buffer)
+    // sendMsg("Exported successfully.")
   }
 }
 

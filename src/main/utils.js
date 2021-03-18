@@ -98,10 +98,10 @@ const sortData = (data) => {
 }
 
 const langMap = new Map([
+  ['en-us', 'English'],
   ['zh-cn', '简体中文'],
   ['zh-tw', '繁體中文'],
   ['de-de', 'Deutsch'],
-  ['en-us', 'English'],
   ['es-es', 'Español'],
   ['fr-fr', 'Français'],
   ['id-id', 'Indonesia'],
@@ -114,10 +114,10 @@ const langMap = new Map([
 ])
 
 const localeMap = new Map([
+  ['en-us', ['en-AU', 'en-CA', 'en-GB', 'en-NZ', 'en-US', 'en-ZA', 'en']],
   ['zh-cn', ['zh', 'zh-CN']],
   ['zh-tw', ['zh-TW']],
   ['de-de', ['de-AT', 'de-CH', 'de-DE', 'de']],
-  ['en-us', ['en-AU', 'en-CA', 'en-GB', 'en-NZ', 'en-US', 'en-ZA', 'en']],
   ['es-es', ['es', 'es-419']],
   ['fr-fr', ['fr-CA', 'fr-CH', 'fr-FR', 'fr']],
   ['id-id', ['id']],

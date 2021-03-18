@@ -217,7 +217,6 @@ onMounted(async () => {
   ipcRenderer.on('LOAD_DATA_STATUS', (event, message) => {
     state.log = message
   })
-
   ipcRenderer.on('ERROR', (event, err) => {
     console.error(err)
   })

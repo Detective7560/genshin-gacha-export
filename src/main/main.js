@@ -68,3 +68,6 @@ if (!isFirstInstance) {
   })
 }
 
+const getWin = () => win
+
+exports.getWin = getWin
