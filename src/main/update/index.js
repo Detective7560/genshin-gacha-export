@@ -26,11 +26,7 @@ const appPath = isDev ? path.resolve(__dirname, '../../', 'update-dev/app'): app
 const updatePath = isDev ? path.resolve(__dirname, '../../', 'update-dev/download') : path.resolve(appPath, '..', '..', 'update')
 
 const update = async () => {
-<<<<<<< HEAD:src/main/update/index.js
   return;
-=======
-  // Removed this for security concerns.
->>>>>>> c159a15 (Fixing merge conflict, and removing some checks related to background update):src/update/index.js
 }
 
 const getUpdateInfo = () => updateInfo
